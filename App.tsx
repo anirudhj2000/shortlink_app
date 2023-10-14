@@ -15,12 +15,15 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
 import Home from './src/screens/home';
 
 function App(): JSX.Element {
   return (
     <SafeAreaView>
-      <Home />
+      <NavigationContainer>
+        <Home />
+      </NavigationContainer>
     </SafeAreaView>
   );
 }
