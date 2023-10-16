@@ -16,17 +16,15 @@ import {
   View,
 } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
-import Home from './src/screens/home';
+import MainStackNavigator from './src/navigation/MainStack';
 
-function App(): JSX.Element {
+const App = () => {
   return (
-    <SafeAreaView>
-      <NavigationContainer>
-        <Home />
-      </NavigationContainer>
-    </SafeAreaView>
+    <NavigationContainer>
+      <MainStackNavigator />
+    </NavigationContainer>
   );
-}
+};
 
 const styles = StyleSheet.create({
   sectionContainer: {
