@@ -17,12 +17,16 @@ import {
 } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import MainStackNavigator from './src/navigation/MainStack';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import 'react-native-gesture-handler';
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <MainStackNavigator />
-    </NavigationContainer>
+    <GestureHandlerRootView style={{flex: 1}}>
+      <NavigationContainer>
+        <MainStackNavigator />
+      </NavigationContainer>
+    </GestureHandlerRootView>
   );
 };
 
