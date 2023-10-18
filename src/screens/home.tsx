@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 
 const Home = () => {
+  const [link, setLink] = React.useState<string>('');
   return (
     <SafeAreaView>
       <View
@@ -39,6 +40,8 @@ const Home = () => {
           </View>
           <Text style={{fontSize: 24}}>/</Text>
           <TextInput
+            value={link}
+            onChangeText={link => setLink(link)}
             style={[styles.inputContainerStyle, {width: '60%', padding: '3%'}]}
           />
         </View>
